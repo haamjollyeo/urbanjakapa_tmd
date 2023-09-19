@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>실습활동</title>
+    <style>
+        body {
+            height: 940px;
+            width: 50%;
+            background-position: center;
+            background-image: url('map.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .s-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: width 250ms ease, height 250ms ease;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<a href="index.html"><img src="urban.png" width="250"></a><br><br>
+아이콘을 원하는 위치로 드래그 하세요.<br><br>
+<img src="shop.png" class="s-img" alt="shop">
+<img src="res.png" class="s-img" alt="res">
+<img src="busstop.png" class="s-img" alt="busstop">
+<img src="police.png" class="s-img" alt="police">
+<img src="bank.png" class="s-img" alt="bank">
+<img src="hos.png" class="s-img" alt="hos">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/draggabilly/3.0.0/draggabilly.pkgd.min.js" integrity="sha512-hbEWVzVt2yK7kQmJ1NZirxxO0NPtE4W09fT4f9Emem/n0rMPFHlLbuLcUcLNrtUGWGoQ8qGvKDVJnRRuCzjeZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    let elList = document.querySelectorAll('.s-img');
+    elList.forEach(function(el) {
+        new Draggabilly(el);
+    });
+</script>
+</body>
+</html>
